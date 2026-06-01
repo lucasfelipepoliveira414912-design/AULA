@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-pip install faker
 from faker import Faker
 
 fake = Faker('pt_BR')
