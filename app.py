@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from faker import Faker
+#from faker import Faker
 
 fake = Faker('pt_BR')
 
@@ -18,8 +18,14 @@ produtos = [
 
 df = pd.DataFrame({
     "venda_id": np.arange(1, n + 1),
-    "cliente": [fake.name() for _ in range(n)],
-    "cidade": [fake.city() for _ in range(n)],
+"cliente": np.random.choice(
+    ["Lucas", "Maria", "João", "Ana", "Pedro"],
+    n
+),
+"cidade": np.random.choice(
+    ["Itaúna", "Divinópolis", "Belo Horizonte"],
+    n
+),
     "produto": np.random.choice(produtos, n),
     "quantidade": np.random.randint(1, 6, n),
     "valor_unitario": np.random.uniform(50, 5000, n).round(2)
