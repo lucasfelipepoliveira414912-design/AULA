@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 #from faker import Faker
 
-fake = Faker('pt_BR')
+#fake = Faker('pt_BR')
 
 n = 50000
 
